@@ -27,7 +27,7 @@ def selectFile(directory):
     try:
         Files = os.listdir(directory)
         for i, File in enumerate(Files):
-            print(i, File)
+            print('[{0}] {1}'.format(i, File))
         Filenumber = int(input())
         print(Files[Filenumber])
         Filepath = directory + '/' + Files[Filenumber]
