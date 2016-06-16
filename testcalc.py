@@ -11,13 +11,13 @@ def testcalc():
     
     orbits = ['1s', '2s', '2p', '3s', '3p', '3d', '4s', '4p', '4d', '4f']
 
-    print('電子捕獲断面積ファイルを選んでください．')
+    print('計算したい電子捕獲断面積ファイルの番号を選んでください．')
     ECCSFilePath = selectFile('ECCS')
     ECCSs = np.loadtxt(ECCSFilePath, delimiter=',')
 
-    print('どの衝突エネルギーで計算を行いますか．')
+    print('計算したい衝突エネルギーの番号を選んでください．')
     for (i, Show_Col_E) in enumerate(ECCSs[:,0]):
-        print(str(i) + ' ' + str(Show_Col_E))
+        print('[{0}] {1}'.format(i,Show_Col_E))
 
     #衝突エネルギー[keV/u]を決める
     Collision_Energy = int(input())
@@ -38,7 +38,7 @@ def testcalc():
         Cross_Sections_dict[orbit] = Cross_Sections_list[i] * 1.e-16
     #print(Cross_Sections_dict)
     
-    print('A係数ファイルを選んでください．')
+    print('計算したいA係数ファイルの番号を選んでください．')
     ACFilePath = selectFile('AC')
     ACs = np.loadtxt(ACFilePath, delimiter=',')
 
