@@ -10,8 +10,6 @@ import matplotlib.pyplot as plt
 def testcalc():
     
     orbits = ['1s', '2s', '2p', '3s', '3p', '3d', '4s', '4p', '4d', '4f']
-    d = datetime.datetime.today()
-    default_output_filename = d.strftime('%y%m%d_%H%M_')
 
     print('電子捕獲断面積ファイルを選んでください．')
     ECCSFilePath = selectFile('ECCS')
@@ -24,7 +22,6 @@ def testcalc():
     #衝突エネルギー[keV/u]を決める
     Collision_Energy = int(input())
     print('{0} keV/u'.format(ECCSs[Collision_Energy,0]))
-    default_output_filename = '{0}{1}keVu'.format(default_output_filename,ECCSs[Collision_Energy,0])
 
     #衝突エネルギーから衝突速度計算
     Collision_Speed = convert_energy(ECCSs[Collision_Energy,0])
@@ -58,8 +55,6 @@ def testcalc():
     He = float(input('Heの粒子数を入力してください(単位cm^-3) > '))
     f0 = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
     f0_3 = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-    default_output_filename = '{0}_{1}percmcube'.format(default_output_filename, He)
-    print(default_output_filename)
  
     #計算を行うtime regionを決める
     t = np.linspace(0,2.5e-7,100000)
@@ -69,11 +64,6 @@ def testcalc():
 
     #微分方程式をodeintに解かせる
     sol, infodict = odeint(dif_eqs2, f0, t, args=(Collision_Speed,Total_Cross_Section,He,Cross_Sections_dict,AC_dict),full_output=True, printmessg=True)    
-    #print('len(sol) = {0}'.format(len(sol)))
-
-    #for key, val in infodict.items():
-        #print('infodict[\'{0}\'] = {1}'.format(key, val))
-
 
     fig = plot_populations([t,x], sol, orbits)
 
