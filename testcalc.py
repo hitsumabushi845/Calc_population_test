@@ -77,10 +77,6 @@ def testcalc():
 
     fig = plot_populations([t,x], sol, orbits)
 
-    saveyn = input('グラフを保存しますか?([y]/n) > ')
-    if saveyn == 'y' or saveyn == 'Y':
-        figoutput(default_output_filename, fig)
-
 if __name__ == '__main__':
 
     print('This is the main function.')

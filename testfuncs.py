@@ -6,19 +6,6 @@ import math
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ptick
 
-def dif_eqs(f, t, v, Total_Cross_Section, He, Cross_Sections_dict, A):
-
-    df0dt = -Total_Cross_Section * v * He * f[0] 
-    df1dt = Cross_Sections_dict['1s']*v*He*f[0] + A['2s']['1s']*f[2] + A['2p']['1s']*f[3] + A['3p']['1s']*f[5] + A['3s']['1s']*f[4] + A['3d']['1s']*f[6]
-    df2dt = Cross_Sections_dict['2s']*v*He*f[0] + A['3p']['2s']*f[5] - A['2s']['1s']*f[2]
-    df3dt = Cross_Sections_dict['2p']*v*He*f[0] + A['3s']['2p']*f[4] + A['3d']['2p']*f[6] - A['2p']['1s']*f[3]
-    df4dt = Cross_Sections_dict['3s']*v*He*f[0] - (A['3s']['2p']+A['3s']['1s'])*f[4]
-    df5dt = Cross_Sections_dict['3p']*v*He*f[0] - (A['3p']['2s'] + A['3p']['1s'])*f[5]
-    df6dt = Cross_Sections_dict['3d']*v*He*f[0] - (A['3d']['2p']+A['3d']['1s'])*f[6]    
-    dfdt = [df0dt, df1dt, df2dt, df3dt, df4dt, df5dt, df6dt]
-
-    return dfdt
-
 def dif_eqs2(f, t, v, Total_Cross_Section, He, Cross_Sections_dict, A):
 
     df0dt = -Total_Cross_Section * v * He * f[0] 
@@ -69,10 +56,6 @@ def convert_energy(col_Energy_kVu):
     
     return col_Energy_cms
 
-def convert_pressure(pressure=1.0e+03, temperature=300):
-    pressure_per_cmsquared = pressure/(1.38e-23*temperature)
-    return pressure_per_cmsquared
-
 def plot_populations(xaxiss, populations, orbits):
     
     if len(xaxiss) != 1:
@@ -115,10 +98,3 @@ def plot_populations(xaxiss, populations, orbits):
 
     return fig
 
-def figoutput(default_output_filename, fig):
-
-        figname = str(input('グラフのファイル名を入力してください．(default={0}_Population.pdf)'.format(default_output_filename)))
-        if figname:
-            plt.savefig('graphs/{0}.pdf'.format(figname),bbox_inches='tight',pad_inches=0.0)
-        else:
-            plt.savefig('graphs/{0}_Population.pdf'.format(default_output_filename),bbox_inches='tight',pad_inches=0.0)
