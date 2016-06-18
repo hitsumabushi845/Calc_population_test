@@ -1,6 +1,7 @@
 import numpy as np
 import os,sys
 import math
+import gc
 import datetime
 from scipy.integrate import odeint
 from scipy.linalg import block_diag
@@ -37,6 +38,8 @@ def testcalc():
     for i, orbit in enumerate(orbits):
         Cross_Sections_dict[orbit] = Cross_Sections_list[i] * 1.e-16
     #print(Cross_Sections_dict)
+    del Cross_Sections_list
+    gc.collect()
     
     print('計算したいA係数ファイルの番号を選んでください．')
     ACFilePath = selectFile('AC')
@@ -48,13 +51,12 @@ def testcalc():
     for (num1, i) in enumerate(orbits):
         for (num2, f) in enumerate(orbits):
             AC_dict[i][f] = ACs[num1][num2]
-
-    #print(AC_dict)
+    del ACs
+    gc.collect()
 
     #初期条件設定(衝突前なのでprimary ionが100%
     He = float(input('Heの粒子数を入力してください(単位cm^-3) > '))
     f0 = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-    f0_3 = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
  
     #計算を行うtime rangeを決める
     t = np.linspace(0,2.5e-7,100000)
