@@ -2,6 +2,7 @@ import numpy as np
 import os,sys
 import math
 import gc
+import json
 import datetime
 from scipy.integrate import odeint
 from scipy.linalg import block_diag
@@ -12,25 +13,45 @@ def testcalc():
     
     orbits = ['1s', '2s', '2p', '3s', '3p', '3d', '4s', '4p', '4d', '4f']
 
-    print('計算したい電子捕獲断面積ファイルの番号を選んでください．')
-    ECCSFilePath = selectFile('ECCS')
-    ECCSs = np.loadtxt(ECCSFilePath, delimiter=',')
+    if os.path.exists('lastparameters.json'):
+        do_you_read_jsonfile = input('前回の設定を使用しますか?[y]/n > ')
+        if do_you_read_jsonfile == 'y' or do_you_read_jsonfile == 'Y':
+            param_dic = inputjson()
+        else:
+            param_dic = {}
+    else:
+        param_dic = {}
 
-    print('計算したい衝突エネルギーの番号を選んでください．')
-    for (i, Show_Col_E) in enumerate(ECCSs[:,0]):
-        print('[{0}] {1}'.format(i,Show_Col_E))
+    if 'ECCS_Filename' in param_dic:
+        ECCSs = np.loadtxt(param_dic['ECCS_Filename'], delimiter=',')
+    else:
+        print('計算したい電子捕獲断面積ファイルの番号を選んでください．')
+        ECCSFilePath = selectFile('ECCS')
+        ECCSs = np.loadtxt(ECCSFilePath, delimiter=',')
+        param_dic['ECCS_Filename'] = ECCSFilePath 
 
-    #衝突エネルギー[keV/u]を決める
-    Collision_Energy = int(input())
-    print('{0} keV/u'.format(ECCSs[Collision_Energy,0]))
+    if 'Col_Energy' in param_dic:
+        Collision_Speed = convert_energy(ECCSs[param_dic['Col_Energy'],0])
+        Total_Cross_Section = ECCSs[param_dic['Col_Energy'],1] * 1.e-16
+        Cross_Sections_list = ECCSs[param_dic['Col_Energy'],2:]
+    else:
+        print('計算したい衝突エネルギーの番号を選んでください．')
+        for (i, Show_Col_E) in enumerate(ECCSs[:,0]):
+            print('[{0}] {1}'.format(i,Show_Col_E))
 
-    #衝突エネルギーから衝突速度計算
-    Collision_Speed = convert_energy(ECCSs[Collision_Energy,0])
-    print('{0} cm/s'.format(Collision_Speed))
+        #衝突エネルギー[keV/u]を決める
+        Collision_Energy = int(input())
+        print('{0} keV/u'.format(ECCSs[Collision_Energy,0]))
+        default_output_filename = '{0}{1}keVu'.format(default_output_filename,ECCSs[Collision_Energy,0])
+        param_dic['Col_Energy'] = Collision_Energy
 
-    #衝突エネルギーに対応する電子捕獲断面積をCross_Sections_listに格納，Total_Cross_Sectionに全断面積を格納
-    Total_Cross_Section = ECCSs[Collision_Energy,1] * 1.e-16
-    Cross_Sections_list = ECCSs[Collision_Energy,2:]
+        #衝突エネルギーから衝突速度計算
+        Collision_Speed = convert_energy(ECCSs[Collision_Energy,0])
+        print('{0} cm/s'.format(Collision_Speed))
+
+        #衝突エネルギーに対応する電子捕獲断面積をCross_Sections_listに格納，Total_Cross_Sectionに全断面積を格納
+        Total_Cross_Section = ECCSs[Collision_Energy,1] * 1.e-16
+        Cross_Sections_list = ECCSs[Collision_Energy,2:]
 
     #電子軌道の名前をkeyに持つ辞書に電子捕獲断面積を格納
     #電子捕獲断面積の単位が10^-16 cm^2なので，cm^2に修正
@@ -41,9 +62,13 @@ def testcalc():
     del Cross_Sections_list
     gc.collect()
     
-    print('計算したいA係数ファイルの番号を選んでください．')
-    ACFilePath = selectFile('AC')
-    ACs = np.loadtxt(ACFilePath, delimiter=',')
+    if 'AC_Filename' in param_dic:
+        ACs = np.loadtxt(param_dic['AC_Filename'], delimiter=',')
+    else:
+        print('計算したいA係数ファイルの番号を選んでください．')
+        ACFilePath = selectFile('AC')
+        ACs = np.loadtxt(ACFilePath, delimiter=',')
+        param_dic['AC_Filename'] = ACFilePath
 
     # A係数を格納する2次元辞書
     AC_dict = make2Ddict(orbits)
@@ -54,8 +79,12 @@ def testcalc():
     del ACs
     gc.collect()
 
-    #初期条件設定(衝突前なのでprimary ionが100%
-    He = float(input('Heの粒子数を入力してください(単位cm^-3) > '))
+    if 'particle_number' in param_dic:
+        He = param_dic['particle_number']
+    else:
+        #初期条件設定(衝突前なのでprimary ionが100%
+        He = float(input('Heの粒子数を入力してください(単位cm^-3) > '))
+        param_dic['particle_number'] = He
     f0 = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
  
     #計算を行うtime rangeを決める
@@ -67,7 +96,19 @@ def testcalc():
     #微分方程式をodeintに解かせる
     sol, infodict = odeint(dif_eqs2, f0, t, args=(Collision_Speed,Total_Cross_Section,He,Cross_Sections_dict,AC_dict),full_output=True, printmessg=True)    
 
-    fig = plot_populations([t,x], sol, orbits)
+    if 'Horizontal_axis' in param_dic:
+        if param_dic['Horizontal_axis'] == 't':
+            fig = plot_populations([t], sol, orbits)
+        else:
+            fig = plot_populations([x], sol, orbits)
+    else:
+        fig, param_dic['Horizontal_axis'] = plot_populations([t,x], sol, orbits)
+
+    plt.clf()
+
+    if do_you_read_jsonfile != 'y' or do_you_read_jsonfile != 'Y':
+        f = open('lastparameters.json', 'w')
+        json.dump(param_dic, f)
 
 if __name__ == '__main__':
 

@@ -3,6 +3,7 @@ import scipy as sp
 import os,sys
 import datetime
 import math
+import json
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ptick
 
@@ -98,3 +99,18 @@ def plot_populations(xaxiss, populations, orbits):
 
     return fig
 
+def outputjson(parameter_dic, output_filename='lastparameter.json'):
+    '''
+        プログラムの実行に使ったパラメータ群をjsonファイルに出力
+    '''
+    output_file = open(output_filename, 'w')
+    json.dump(parameter_dic, output_file)
+
+def inputjson(input_filename='lastparameters.json'):
+    '''
+        前回のプログラム実行に使ったパラメータ群を辞書に格納
+    '''
+    f = open(input_filename)
+    param_dic = json.load(f)
+
+    return param_dic
