@@ -75,7 +75,7 @@ def plot_populations(xaxiss, populations, orbits):
     if isPlotBeforeCollision == 'Y' or isPlotBeforeCollision == 'y':
         popfig.plot(xaxisarray, populations[:,0], label='O7+')
     for i in np.arange(1,11):
-        popfig.plot(xaxisarray, populations[:,i], label='{0}'.format(orbits[i-1]))
+        popfig.plot(xaxisarray[::100], populations[::100,i], label='{0}'.format(orbits[i-1]))
 
     if selectXaxis == 'time' or selectXaxis == 't':
         popfig.set_xlabel('Time[s]', fontsize=25)
