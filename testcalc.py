@@ -87,14 +87,30 @@ def testcalc():
         param_dic['particle_number'] = He
     f0 = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
  
-    #計算を行うtime rangeを決める
-    t = np.linspace(0,2.5e-7,100000)
+    #計算を行う時間幅，ステップ幅，t0を決める
+    tend = 2.5e-7
+    dt = 1.e-14
+    t0 = 0.0
 
-    #時間とイオンビームの速度から位置を決める
-    x = t * Collision_Speed
+    r = ode(dif_eqs_forode).set_integrator('vode',method='bdf')
+    r.set_initial_value(f0,t0).set_f_params(Collision_Speed,Total_Cross_Section,He,Cross_Sections_dict,AC_dict)
 
-    #微分方程式をodeintに解かせる
-    sol, infodict = odeint(dif_eqs2, f0, t, args=(Collision_Speed,Total_Cross_Section,He,Cross_Sections_dict,AC_dict),full_output=True, printmessg=True)    
+    t1 = []
+    res = []
+    print('Enter 1.e-14 calculation')
+    counter = 1
+    while r.successful() and r.t < tend:
+        if counter % 10000 == 0:
+            print('counter = {0}'.format(counter))
+        tmp = r.integrate(r.t+dt)
+        t1.append(r.t)
+        res.append(tmp)
+        counter = counter + 1
+
+    t1 = np.array(t1)
+    sol1 = np.array(res)
+
+    x1 = t1 * Collision_Speed
 
     if 'Horizontal_axis' in param_dic:
         if param_dic['Horizontal_axis'] == 't':

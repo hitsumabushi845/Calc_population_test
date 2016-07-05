@@ -7,7 +7,7 @@ import json
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ptick
 
-def dif_eqs2(f, t, v, Total_Cross_Section, He, Cross_Sections_dict, A):
+def dif_eqs2(t, f, v, Total_Cross_Section, He, Cross_Sections_dict, A):
 
     df0dt = -Total_Cross_Section * v * He * f[0] 
     df1dt = Cross_Sections_dict['1s']*v*He*f[0] + A['2s']['1s']*f[2] + A['2p']['1s']*f[3] + A['3p']['1s']*f[5] + A['3s']['1s']*f[4] + A['3d']['1s']*f[6] + A['4s']['1s']*f[7]
