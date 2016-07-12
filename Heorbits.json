@@ -1,0 +1,681 @@
+{
+  "1s1s_singlet_S0": {
+    "electron_configuration": "1s1s",
+    "principal_number": 1,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 0,
+    "total_orbital_angular_momentum": 0
+  },
+  "1s2p_singlet_P1": {
+    "electron_configuration": "1s2p",
+    "principal_number": 2,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 1,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s2p_triplet_P0": {
+    "electron_configuration": "1s2p",
+    "principal_number": 2,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 0,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s2p_triplet_P1": {
+    "electron_configuration": "1s2p",
+    "principal_number": 2,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 1,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s2p_triplet_P2": {
+    "electron_configuration": "1s2p",
+    "principal_number": 2,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 2,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s2s_singlet_S0": {
+    "electron_configuration": "1s2s",
+    "principal_number": 2,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 0,
+    "total_orbital_angular_momentum": 0
+  },
+  "1s2s_triplet_S1": {
+    "electron_configuration": "1s2s",
+    "principal_number": 2,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 1,
+    "total_orbital_angular_momentum": 0
+  },
+  "1s3d_singlet_D2": {
+    "electron_configuration": "1s3d",
+    "principal_number": 3,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 2,
+    "total_orbital_angular_momentum": 2
+  },
+  "1s3d_triplet_D1": {
+    "electron_configuration": "1s3d",
+    "principal_number": 3,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 1,
+    "total_orbital_angular_momentum": 2
+  },
+  "1s3d_triplet_D2": {
+    "electron_configuration": "1s3d",
+    "principal_number": 3,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 2,
+    "total_orbital_angular_momentum": 2
+  },
+  "1s3d_triplet_D3": {
+    "electron_configuration": "1s3d",
+    "principal_number": 3,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 3,
+    "total_orbital_angular_momentum": 2
+  },
+  "1s3p_singlet_P1": {
+    "electron_configuration": "1s3p",
+    "principal_number": 3,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 1,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s3p_triplet_P0": {
+    "electron_configuration": "1s3p",
+    "principal_number": 3,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 0,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s3p_triplet_P1": {
+    "electron_configuration": "1s3p",
+    "principal_number": 3,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 1,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s3p_triplet_P2": {
+    "electron_configuration": "1s3p",
+    "principal_number": 3,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 2,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s3s_singlet_S0": {
+    "electron_configuration": "1s3s",
+    "principal_number": 3,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 0,
+    "total_orbital_angular_momentum": 0
+  },
+  "1s3s_triplet_S1": {
+    "electron_configuration": "1s3s",
+    "principal_number": 3,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 1,
+    "total_orbital_angular_momentum": 0
+  },
+  "1s4d_singlet_D2": {
+    "electron_configuration": "1s4d",
+    "principal_number": 4,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 2,
+    "total_orbital_angular_momentum": 2
+  },
+  "1s4d_triplet_D1": {
+    "electron_configuration": "1s4d",
+    "principal_number": 4,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 1,
+    "total_orbital_angular_momentum": 2
+  },
+  "1s4d_triplet_D2": {
+    "electron_configuration": "1s4d",
+    "principal_number": 4,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 2,
+    "total_orbital_angular_momentum": 2
+  },
+  "1s4d_triplet_D3": {
+    "electron_configuration": "1s4d",
+    "principal_number": 4,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 3,
+    "total_orbital_angular_momentum": 2
+  },
+  "1s4f_singlet_F3": {
+    "electron_configuration": "1s4f",
+    "principal_number": 4,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 3,
+    "total_orbital_angular_momentum": 3
+  },
+  "1s4f_triplet_F2": {
+    "electron_configuration": "1s4f",
+    "principal_number": 4,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 2,
+    "total_orbital_angular_momentum": 3
+  },
+  "1s4f_triplet_F3": {
+    "electron_configuration": "1s4f",
+    "principal_number": 4,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 3,
+    "total_orbital_angular_momentum": 3
+  },
+  "1s4f_triplet_F4": {
+    "electron_configuration": "1s4f",
+    "principal_number": 4,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 4,
+    "total_orbital_angular_momentum": 3
+  },
+  "1s4p_singlet_P1": {
+    "electron_configuration": "1s4p",
+    "principal_number": 4,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 1,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s4p_triplet_P0": {
+    "electron_configuration": "1s4p",
+    "principal_number": 4,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 0,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s4p_triplet_P1": {
+    "electron_configuration": "1s4p",
+    "principal_number": 4,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 1,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s4p_triplet_P2": {
+    "electron_configuration": "1s4p",
+    "principal_number": 4,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 2,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s4s_singlet_S0": {
+    "electron_configuration": "1s4s",
+    "principal_number": 4,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 0,
+    "total_orbital_angular_momentum": 0
+  },
+  "1s4s_triplet_S1": {
+    "electron_configuration": "1s4s",
+    "principal_number": 4,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 1,
+    "total_orbital_angular_momentum": 0
+  },
+  "1s5d_singlet_D2": {
+    "electron_configuration": "1s5d",
+    "principal_number": 5,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 2,
+    "total_orbital_angular_momentum": 2
+  },
+  "1s5d_triplet_D1": {
+    "electron_configuration": "1s5d",
+    "principal_number": 5,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 1,
+    "total_orbital_angular_momentum": 2
+  },
+  "1s5d_triplet_D2": {
+    "electron_configuration": "1s5d",
+    "principal_number": 5,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 2,
+    "total_orbital_angular_momentum": 2
+  },
+  "1s5d_triplet_D3": {
+    "electron_configuration": "1s5d",
+    "principal_number": 5,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 3,
+    "total_orbital_angular_momentum": 2
+  },
+  "1s5f_singlet_F3": {
+    "electron_configuration": "1s5f",
+    "principal_number": 5,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 3,
+    "total_orbital_angular_momentum": 3
+  },
+  "1s5f_triplet_F2": {
+    "electron_configuration": "1s5f",
+    "principal_number": 5,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 2,
+    "total_orbital_angular_momentum": 3
+  },
+  "1s5f_triplet_F3": {
+    "electron_configuration": "1s5f",
+    "principal_number": 5,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 3,
+    "total_orbital_angular_momentum": 3
+  },
+  "1s5f_triplet_F4": {
+    "electron_configuration": "1s5f",
+    "principal_number": 5,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 4,
+    "total_orbital_angular_momentum": 3
+  },
+  "1s5g_singlet_G4": {
+    "electron_configuration": "1s5g",
+    "principal_number": 5,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 4,
+    "total_orbital_angular_momentum": 4
+  },
+  "1s5g_triplet_G3": {
+    "electron_configuration": "1s5g",
+    "principal_number": 5,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 3,
+    "total_orbital_angular_momentum": 4
+  },
+  "1s5g_triplet_G4": {
+    "electron_configuration": "1s5g",
+    "principal_number": 5,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 4,
+    "total_orbital_angular_momentum": 4
+  },
+  "1s5g_triplet_G5": {
+    "electron_configuration": "1s5g",
+    "principal_number": 5,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 5,
+    "total_orbital_angular_momentum": 4
+  },
+  "1s5p_singlet_P1": {
+    "electron_configuration": "1s5p",
+    "principal_number": 5,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 1,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s5p_triplet_P0": {
+    "electron_configuration": "1s5p",
+    "principal_number": 5,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 0,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s5p_triplet_P1": {
+    "electron_configuration": "1s5p",
+    "principal_number": 5,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 1,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s5p_triplet_P2": {
+    "electron_configuration": "1s5p",
+    "principal_number": 5,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 2,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s5s_singlet_S0": {
+    "electron_configuration": "1s5s",
+    "principal_number": 5,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 0,
+    "total_orbital_angular_momentum": 0
+  },
+  "1s5s_triplet_S1": {
+    "electron_configuration": "1s5s",
+    "principal_number": 5,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 1,
+    "total_orbital_angular_momentum": 0
+  },
+  "1s6d_singlet_D2": {
+    "electron_configuration": "1s6d",
+    "principal_number": 6,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 2,
+    "total_orbital_angular_momentum": 2
+  },
+  "1s6d_triplet_D1": {
+    "electron_configuration": "1s6d",
+    "principal_number": 6,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 1,
+    "total_orbital_angular_momentum": 2
+  },
+  "1s6d_triplet_D2": {
+    "electron_configuration": "1s6d",
+    "principal_number": 6,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 2,
+    "total_orbital_angular_momentum": 2
+  },
+  "1s6d_triplet_D3": {
+    "electron_configuration": "1s6d",
+    "principal_number": 6,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 3,
+    "total_orbital_angular_momentum": 2
+  },
+  "1s6f_singlet_F3": {
+    "electron_configuration": "1s6f",
+    "principal_number": 6,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 3,
+    "total_orbital_angular_momentum": 3
+  },
+  "1s6f_triplet_F2": {
+    "electron_configuration": "1s6f",
+    "principal_number": 6,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 2,
+    "total_orbital_angular_momentum": 3
+  },
+  "1s6f_triplet_F3": {
+    "electron_configuration": "1s6f",
+    "principal_number": 6,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 3,
+    "total_orbital_angular_momentum": 3
+  },
+  "1s6f_triplet_F4": {
+    "electron_configuration": "1s6f",
+    "principal_number": 6,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 4,
+    "total_orbital_angular_momentum": 3
+  },
+  "1s6g_singlet_G4": {
+    "electron_configuration": "1s6g",
+    "principal_number": 6,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 4,
+    "total_orbital_angular_momentum": 4
+  },
+  "1s6g_triplet_G3": {
+    "electron_configuration": "1s6g",
+    "principal_number": 6,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 3,
+    "total_orbital_angular_momentum": 4
+  },
+  "1s6g_triplet_G4": {
+    "electron_configuration": "1s6g",
+    "principal_number": 6,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 4,
+    "total_orbital_angular_momentum": 4
+  },
+  "1s6g_triplet_G5": {
+    "electron_configuration": "1s6g",
+    "principal_number": 6,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 5,
+    "total_orbital_angular_momentum": 4
+  },
+  "1s6h_singlet_H5": {
+    "electron_configuration": "1s6h",
+    "principal_number": 6,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 5,
+    "total_orbital_angular_momentum": 5
+  },
+  "1s6h_triplet_H4": {
+    "electron_configuration": "1s6h",
+    "principal_number": 6,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 4,
+    "total_orbital_angular_momentum": 5
+  },
+  "1s6h_triplet_H5": {
+    "electron_configuration": "1s6h",
+    "principal_number": 6,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 5,
+    "total_orbital_angular_momentum": 5
+  },
+  "1s6h_triplet_H6": {
+    "electron_configuration": "1s6h",
+    "principal_number": 6,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 6,
+    "total_orbital_angular_momentum": 5
+  },
+  "1s6p_singlet_P1": {
+    "electron_configuration": "1s6p",
+    "principal_number": 6,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 1,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s6p_triplet_P0": {
+    "electron_configuration": "1s6p",
+    "principal_number": 6,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 0,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s6p_triplet_P1": {
+    "electron_configuration": "1s6p",
+    "principal_number": 6,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 1,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s6p_triplet_P2": {
+    "electron_configuration": "1s6p",
+    "principal_number": 6,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 2,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s6s_singlet_S0": {
+    "electron_configuration": "1s6s",
+    "principal_number": 6,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 0,
+    "total_orbital_angular_momentum": 0
+  },
+  "1s6s_triplet_S1": {
+    "electron_configuration": "1s6s",
+    "principal_number": 6,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 1,
+    "total_orbital_angular_momentum": 0
+  },
+  "1s7d_singlet_D2": {
+    "electron_configuration": "1s7d",
+    "principal_number": 7,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 2,
+    "total_orbital_angular_momentum": 2
+  },
+  "1s7d_triplet_D1": {
+    "electron_configuration": "1s7d",
+    "principal_number": 7,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 1,
+    "total_orbital_angular_momentum": 2
+  },
+  "1s7d_triplet_D2": {
+    "electron_configuration": "1s7d",
+    "principal_number": 7,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 2,
+    "total_orbital_angular_momentum": 2
+  },
+  "1s7d_triplet_D3": {
+    "electron_configuration": "1s7d",
+    "principal_number": 7,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 3,
+    "total_orbital_angular_momentum": 2
+  },
+  "1s7f_singlet_F3": {
+    "electron_configuration": "1s7f",
+    "principal_number": 7,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 3,
+    "total_orbital_angular_momentum": 3
+  },
+  "1s7f_triplet_F2": {
+    "electron_configuration": "1s7f",
+    "principal_number": 7,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 2,
+    "total_orbital_angular_momentum": 3
+  },
+  "1s7f_triplet_F3": {
+    "electron_configuration": "1s7f",
+    "principal_number": 7,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 3,
+    "total_orbital_angular_momentum": 3
+  },
+  "1s7f_triplet_F4": {
+    "electron_configuration": "1s7f",
+    "principal_number": 7,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 4,
+    "total_orbital_angular_momentum": 3
+  },
+  "1s7g_singlet_G4": {
+    "electron_configuration": "1s7g",
+    "principal_number": 7,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 4,
+    "total_orbital_angular_momentum": 4
+  },
+  "1s7g_triplet_G3": {
+    "electron_configuration": "1s7g",
+    "principal_number": 7,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 3,
+    "total_orbital_angular_momentum": 4
+  },
+  "1s7g_triplet_G4": {
+    "electron_configuration": "1s7g",
+    "principal_number": 7,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 4,
+    "total_orbital_angular_momentum": 4
+  },
+  "1s7g_triplet_G5": {
+    "electron_configuration": "1s7g",
+    "principal_number": 7,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 5,
+    "total_orbital_angular_momentum": 4
+  },
+  "1s7h_singlet_H5": {
+    "electron_configuration": "1s7h",
+    "principal_number": 7,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 5,
+    "total_orbital_angular_momentum": 5
+  },
+  "1s7h_triplet_H4": {
+    "electron_configuration": "1s7h",
+    "principal_number": 7,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 4,
+    "total_orbital_angular_momentum": 5
+  },
+  "1s7h_triplet_H5": {
+    "electron_configuration": "1s7h",
+    "principal_number": 7,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 5,
+    "total_orbital_angular_momentum": 5
+  },
+  "1s7h_triplet_H6": {
+    "electron_configuration": "1s7h",
+    "principal_number": 7,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 6,
+    "total_orbital_angular_momentum": 5
+  },
+  "1s7i_singlet_I6": {
+    "electron_configuration": "1s7i",
+    "principal_number": 7,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 6,
+    "total_orbital_angular_momentum": 6
+  },
+  "1s7i_triplet_I5": {
+    "electron_configuration": "1s7i",
+    "principal_number": 7,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 5,
+    "total_orbital_angular_momentum": 6
+  },
+  "1s7i_triplet_I6": {
+    "electron_configuration": "1s7i",
+    "principal_number": 7,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 6,
+    "total_orbital_angular_momentum": 6
+  },
+  "1s7i_triplet_I7": {
+    "electron_configuration": "1s7i",
+    "principal_number": 7,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 7,
+    "total_orbital_angular_momentum": 6
+  },
+  "1s7p_singlet_P1": {
+    "electron_configuration": "1s7p",
+    "principal_number": 7,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 1,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s7p_triplet_P0": {
+    "electron_configuration": "1s7p",
+    "principal_number": 7,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 0,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s7p_triplet_P1": {
+    "electron_configuration": "1s7p",
+    "principal_number": 7,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 1,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s7p_triplet_P2": {
+    "electron_configuration": "1s7p",
+    "principal_number": 7,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 2,
+    "total_orbital_angular_momentum": 1
+  },
+  "1s7s_singlet_S0": {
+    "electron_configuration": "1s7s",
+    "principal_number": 7,
+    "spin_multiplicity": 1,
+    "total_angular_momentum": 0,
+    "total_orbital_angular_momentum": 0
+  },
+  "1s7s_triplet_S1": {
+    "electron_configuration": "1s7s",
+    "principal_number": 7,
+    "spin_multiplicity": 3,
+    "total_angular_momentum": 1,
+    "total_orbital_angular_momentum": 0
+  }
+}
